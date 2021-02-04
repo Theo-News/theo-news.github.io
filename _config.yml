@@ -1,7 +1,7 @@
 # Setup
-title: tcps
+title: TheoNews
 tagline: 
-url: https://ttcps.github.io
+url: https://theo-news.github.io
 baseurl: ""
 permalink: /:title/
 timezone: Asia/Shanghai
@@ -34,8 +34,8 @@ ga_analytics:
 # Specify the author for blog posts
 author:
   name: tcps
-  url: https://ttcps.github.io/
-  email: tcps0team@gmail.com
+  url: https://theo-news.github.io/
+  email: theonews@tcps.ml
 
 # Custom vars
 version: 3.0.0
