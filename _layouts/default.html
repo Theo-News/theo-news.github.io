@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+  {% include head.html %}
+
+  <body>
+    <script>
+      window.onload = function(){
+    var header = document.getElementById('header');
+    var headerh = header.offsetHeight;
+    var footer = document.getElementById('footer');
+    var footerh = footer.offsetHeight;
+    var minh = headerh + footerh ;
+    var content = document.getElementById('maincnt');content.style.setProperty('--minh', 'calc(100vh - '+minh+'px)');
+    }
+
+    </script>
+    <div id="header">
+    <h1 style="font-size:15px;line-height: 40px;background-color: #1d1d1d;text-align: center; margin: 0px;"><a href="/" style="color: #ffffff;text-decoration: none;">tcps.</a></h1>
+    {% include banner.html text="This site is under construction..." %}
+    </div>
+    <div class="container content" id="maincnt" style="min-height: calc(var(--minh, 0px) - 25px);" >
+      <main>
+        {{ content }}
+      </main>
+    </div>
+    <div style="height: 25px"></div>
+    {% include footer.html %}
+
+    {% if site.ga_analytics %}
+    </div>
+     <script>
+       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+       ga('create', '{{ site.ga_analytics }}', 'auto');
+       ga('send', 'pageview');
+     </script>
+    {% endif %}
+  </body>
+</html>
