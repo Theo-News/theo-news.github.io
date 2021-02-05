@@ -3,7 +3,7 @@ title: TheoNews
 tagline: 
 url: https://theo-news.github.io
 baseurl: ""
-permalink: /:title/
+permalink: /:categories/:title/
 timezone: Asia/Shanghai
 
 # Gems
