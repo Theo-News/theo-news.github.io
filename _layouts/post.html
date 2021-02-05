@@ -5,7 +5,7 @@ layout: default
 {% include post_style.html %}
 
 <article class="post">
-  <h1 class="post-title">{{ page.title }}</h1>
+  <h1 class="post-title" style="margin-top: 50px">{{ page.title }}</h1>
   <time datetime="{{ page.date | date_to_long_string }}" class="post-date">{{ page.date | date_to_long_string }}</time>
   {{ content }}
 </article>
