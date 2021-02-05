@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<h1>Cover</h1>
+{% for post in tag['cover'] limit:1 %}
+<a href="{{ post.url }}" style="text-decoration: none;color: inherit;">
+    <div style="background-color:#f0f0f0;">    
+<img style="padding: 25px 0px;margin: 0px auto;width: 90%;user-select: none;" src="/assets/{{ post.img }}">
+</div>
+    <div style="text-align: center;padding:25px 0px;background-color:#f0f0f0;">
+<span style="background-color:black;color:white;font-weight:600;padding: 0px 10px;">{{ post.category }}</span>
+    <h1 style="margin-top: 10px">{{ post.title }}</h1>
+    <p>{{ post.des }}</p>
+    </div>
+</a>
+{% endfor %}
